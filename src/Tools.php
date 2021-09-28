@@ -657,7 +657,9 @@ class Tools extends BaseTools
             $content .= "<CPF>{$this->config->cpf}</CPF>";
         }
         $content .= "</CPFCNPJ>"
+        if (!empty($this->config->im)) {
             . "<Inscricao>{$this->config->im}</Inscricao>"
+        }
             . "<dtInicio>{$dtInicial}</dtInicio>"
             . "<dtFim>{$dtFinal}</dtFim>"
             . "<NumeroPagina>{$pagina}</NumeroPagina>"
